@@ -68,31 +68,42 @@ function deleteLetter() {
 }
 
 function checkAnswer() {
-    currentRow = rows[rowValue];
-    currentBoxes = currentRow.querySelectorAll('.box');
-    for (let i = 0; i < 5; i++) {
-        
-        box = currentBoxes[i];
-        box.style.backgroundColor = "rgb(59, 57, 57)";
-        box.style.border = "2px solid rgb(59, 57, 57)";
-        for (let j = 0; j < 5; j++) {
-            // If letter is in solution
-            if (enteredWord[i] === solution[j]) {
+    for (word in words) {
+        // console.log(word);
+        if (enteredWord === words[word].toUpperCase()) {
+            console.log("ka ching");
+    
+            currentRow = rows[rowValue];
+            currentBoxes = currentRow.querySelectorAll('.box');
+            for (let i = 0; i < 5; i++) {
+                
+                box = currentBoxes[i];
+                box.style.backgroundColor = "rgb(59, 57, 57)";
+                box.style.border = "2px solid rgb(59, 57, 57)";
+                for (let j = 0; j < 5; j++) {
+                    // If letter is in solution
+                    if (enteredWord[i] === solution[j]) {
 
-                // if letter is in right position
-                if (i === j) {
-                    // console.log("true")
-                    numberCorrect += 1;
-                    box.style.backgroundColor = "#c76020";
-                    box.style.border = "2px solid #c76020";
-                    break;
-                } else {
-                    // console.log("semi-true")
-                    box.style.backgroundColor = "#38d93e";
-                    box.style.border = "2px solid #38d93e";
+                        // if letter is in right position
+                        if (i === j) {
+                            // console.log("true")
+                            numberCorrect += 1;
+                            box.style.backgroundColor = "#c76020";
+                            box.style.border = "2px solid #c76020";
+                            break;
+                        } else {
+                            // console.log("semi-true")
+                            box.style.backgroundColor = "#38d93e";
+                            box.style.border = "2px solid #38d93e";
+                        }
+                    } 
                 }
-            } 
+            }
+            rowValue += 1;
+            enteredWord = "";
+            numberCorrect = 0;
         }
+
     }
 }
 
@@ -103,9 +114,9 @@ function clickEnter() {
             // alert("You Win");
             gameWon = true;
         }
-        rowValue += 1;
-        enteredWord = "";
-        numberCorrect = 0;
+        // rowValue += 1;
+        // enteredWord = "";
+        // numberCorrect = 0;
     } else {
         alert("Must be 5 characters before moving on");
     }
