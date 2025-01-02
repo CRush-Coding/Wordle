@@ -9,7 +9,8 @@ function keyPress(letter) {
         if (!gameWon) {
             deleteLetter();
         }
-    } else if (letter >= 'A' && letter <= 'Z') {
+    } else if (letter.length === 1 && letter >= 'A' && letter <= 'Z') {
+        console.log("error");
         // console.log("LETTER")
         if (!gameWon) {
             addLetter(letter);
