@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="wordle.css">
+    <script src="r.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
 
     <div class="body-container">
 
         <div class="header-container">
+            <div class="header-title">
+                WORDLE
+            </div>
+            <div class="header-buttons">
+                <!-- <button></button>
+                <button></button> -->
+                <button class="bi bi-gear" 
+                style="color: white; font-size: 50px; 
+                background-color: rgb(44, 44, 44); 
+                border: none;
+                cursor: pointer;"
+                onclick="showSettings()"></button>
+            </div>
+
+        </div>
+
+        <div class="settings-container">
+            <div class="settings-reset">
+                <p style="color: white; font-size: 20px; font-weight: bold; border-bottom: 2px solid white;">Reset Button</p>
+                <button onclick="reset()" class="reset-button">Reset</button>
+
+            </div>
 
         </div>
 
@@ -65,11 +90,26 @@
             </div>
         </div>
 
-        <button onclick="reset()" class="reset-button">Reset</button>
+        <div class="letter-container">
+            <div class="letter-row-1">
 
+            </div>
+            <div class="letter-row-2">
+
+            </div>
+            <div class="letter-row-3">
+
+            </div>
+
+        </div>
+
+        
     </div>
 
+
     <script src="wordle_test.js"></script>
+    <script src="functions.js"></script>
+
 </body>
 
 
