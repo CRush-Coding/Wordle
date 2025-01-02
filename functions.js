@@ -84,6 +84,7 @@ function checkAnswer() {
                     numberCorrect += 1;
                     box.style.backgroundColor = "#c76020";
                     box.style.border = "2px solid #c76020";
+                    break;
                 } else {
                     // console.log("semi-true")
                     box.style.backgroundColor = "#38d93e";
@@ -98,7 +99,7 @@ function clickEnter() {
     if (enteredWord.length === 5) {
         checkAnswer();
         if (numberCorrect === 5){
-            alert("You Win");
+            // alert("You Win");
             gameWon = true;
         }
         rowValue += 1;
@@ -122,6 +123,7 @@ function reset() {
             console.log(j);
             // currentBoxes[j].style.backgroundColor = 
         }
+        solution = words[getRandomInt(0, 2314)].toUpperCase();
     }
     rowValue = 0;
     enteredWord = "";
@@ -129,10 +131,19 @@ function reset() {
     gameWon = false;
 }
 
+function showAnswer() {
+    document.querySelector('.answer').innerHTML = solution;
+    if (document.querySelector('.answer').style.display === "none" || document.querySelector('.answer').style.display === "") {
+        document.querySelector('.answer').style.display = "flex";
+    } else {
+        document.querySelector('.answer').style.display = "none";
+    }
+}
+
 document.addEventListener('keydown', (event) => {keyPress(event.key)});
 
 function showSettings() {
-    if (document.querySelector('.settings-container').style.display === "none") {
+    if (document.querySelector('.settings-container').style.display === "none" || document.querySelector('.settings-container').style.display === "") {
         document.querySelector('.settings-container').style.display = "flex";
         console.log("flex");
         document.querySelector('.bi').style.backgroundColor = "rgb(73, 73, 73)";

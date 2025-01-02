@@ -93,6 +93,23 @@ html {
     margin-top: 100px;
 }
 
+.settings-answer {
+    /* border: 2px solid white; */
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 200px;
+    margin-top: 270px;
+}
+
+.answer {
+    display: none;
+}
+
 .main-container {
     /* border: 1px solid white; */
     display: flex;
