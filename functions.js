@@ -155,3 +155,9 @@ function showSettings() {
     }
     // console.log("hello");
 }
+
+document.getElementById("mySettings").addEventListener("click", (event) => {
+    if (event.pointerType === "mouse") {
+        showSettings();
+    }
+});
