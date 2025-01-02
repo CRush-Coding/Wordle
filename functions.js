@@ -17,6 +17,12 @@ function keyPress(letter) {
     }
 }
 
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+
 function addLetter(letter) {
     if (enteredWord.length < 5) {
 
@@ -67,21 +73,21 @@ function checkAnswer() {
         
         box = currentBoxes[i];
         box.style.backgroundColor = "rgb(59, 57, 57)";
-        box.style.border = "none";
+        box.style.border = "2px solid rgb(59, 57, 57)";
         for (let j = 0; j < 5; j++) {
             // If letter is in solution
             if (enteredWord[i] === solution[j]) {
 
                 // if letter is in right position
                 if (i === j) {
-                    console.log("true")
+                    // console.log("true")
                     numberCorrect += 1;
                     box.style.backgroundColor = "#c76020";
-                    box.style.border = "none";
+                    box.style.border = "2px solid #c76020";
                 } else {
-                    console.log("semi-true")
+                    // console.log("semi-true")
                     box.style.backgroundColor = "#38d93e";
-                    box.style.border = "none";
+                    box.style.border = "2px solid #38d93e";
                 }
             } 
         }

@@ -151,5 +151,66 @@ html {
     padding-left: 30px;
     border-radius: 5px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.letter-container {
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    justify-content: center;
+}
+
+.letter-row-1 {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-row-2 {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-row-3 {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-button {
+    width: 35px;
+    height: 50px;
+    background-color: lightgray;
+    margin: 4.5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.letter-button-enter {
+    width: 60px;
+    height: 50px;
+    background-color: lightgray;
+    margin: 4.5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.letter-button-backspace {
+    width: 60px;
+    height: 50px;
+    background-color: lightgray;
+    margin: 4.5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 

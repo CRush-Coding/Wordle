@@ -1,4 +1,4 @@
-[
+words = [
     "cigar", 
     "rebut", 
     "sissy",
