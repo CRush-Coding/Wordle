@@ -46,7 +46,7 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    left: 40%;
+    left: 0;
     height: 100px;
     z-index: 1000;
     align-items: center;
@@ -54,9 +54,14 @@ html {
 
 }
 
+.header-dummy {
+    display: flex;
+    width: 80px;
+}
+
 .header-title {
     display: flex;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     color: white;
     font-size: 40px;
 }
@@ -248,13 +253,16 @@ html {
         margin: 0px;
     }
     .header-container {
-        left: 37%;
         height: 80px;
     }
 
     .main-container {
         margin-top: 70px;
         margin-bottom: 0px;
+    }
+
+    .header-dummy {
+        width: 50px;
     }
 }
 
@@ -263,9 +271,7 @@ html {
         width: 40px;
         height: 40px;
     }
-    .header-container {
-        left: 32%;
-    }
+
     .main-container {
         width: 350px;
     }
