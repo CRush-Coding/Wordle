@@ -168,7 +168,7 @@ function showSettings() {
 }
 
 document.getElementById("mySettings").addEventListener("click", (event) => {
-    if (event.pointerType === "mouse") {
+    if (event.pointerType === "mouse" || event.pointerType === "touch" || event.pointerType === "pen") {
         showSettings();
     }
 });
